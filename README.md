@@ -11,6 +11,45 @@ All-in-one plugin for working with ERPNext / Frappe Framework from Claude Code: 
 | **Agents** | `erpnext-developer` (code tasks), `erpnext-analyst` (business data analysis, read-only) |
 | **MCP** | Live connection to your ERPNext instance via `@casys/mcp-erpnext` (community server, 120+ tools) |
 
+## Example use cases
+
+**Query business data** (`/erp-query` or just ask)
+
+- "Show me all outstanding sales invoices over 30 days"
+- "Who are our top 10 customers by revenue this quarter?"
+- "What's the current stock balance for Item X across all warehouses?"
+
+**Business analysis** (`erpnext-analyst` agent)
+
+- "Analyze our revenue trend over the last 6 months and flag anomalies"
+- "Build a sales funnel summary — leads → opportunities → quotations → orders — and find where we lose the most deals"
+- "Compare gross margin by item group and tell me which products to discontinue"
+
+**Development** (`erpnext-developer` agent + skills)
+
+- "Create a custom DocType for equipment rental agreements with a child table for rental items" (`/erp-doctype`)
+- "Write a server script that auto-applies a 5% discount when order total exceeds 50,000"
+- "Add a scheduled job that emails a daily summary of overdue invoices to accounts"
+
+**Reports & dashboards**
+
+- "Build a Script Report showing item-wise profitability with warehouse filters" (`/erp-report`)
+- "Set up a Frappe Insights dashboard for monthly sales KPIs"
+
+**Custom frontends** (Vue 3 + frappe-ui)
+
+- "Build a customer portal where clients can view their invoices and payment status"
+- "Make a warehouse kiosk PWA for scanning and recording stock entries"
+
+**Troubleshooting & review**
+
+- "I'm getting a ValidationError when submitting this sales order — fix it" (`/erp-fix`)
+- "Audit my custom app for permission bypasses and SQL injection" (frappe-code-review skill)
+
+**Operations via chat** (MCP write tools)
+
+- "Create a sales order for Customer ABC: 10 units of ITEM-001, deliver next Friday, then submit it"
+
 ## Install
 
 In Claude Code:
@@ -33,7 +72,7 @@ Requires Node.js ≥ 20 (the MCP server runs via `npx`).
 claude --plugin-dir /path/to/erpnext-toolkit
 ```
 
-### 3. Verify
+### Verify
 
 - Run `/erp-query outstanding sales invoices` to check that the MCP connection works
 - `/agents` — you should see the two agents listed
