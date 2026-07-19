@@ -11,38 +11,26 @@ All-in-one plugin for working with ERPNext / Frappe Framework from Claude Code: 
 | **Agents** | `erpnext-developer` (code tasks), `erpnext-analyst` (business data analysis, read-only) |
 | **MCP** | Live connection to your ERPNext instance via `@casys/mcp-erpnext` (community server, 120+ tools) |
 
-## Setup
+## Install
 
-### 1. MCP credentials (environment variables)
+In Claude Code:
 
-The MCP server needs three environment variables. Set them in your shell profile (`~/.bashrc` / `~/.zshrc`):
-
-```bash
-export ERPNEXT_URL="https://your-site.erpnext.com"   # your ERPNext site URL
-export ERPNEXT_API_KEY="xxxx"
-export ERPNEXT_API_SECRET="xxxx"
+```
+/plugin marketplace add iam-nazmul/erpnext-toolkit
+/plugin install erpnext-toolkit@erpnext-marketplace
 ```
 
-To generate an API key/secret: in ERPNext, go to **User → API Access → Generate Keys**. It is safest to create a dedicated user and give it only the roles it needs.
+On install, Claude Code prompts for three values (stored as plugin user config):
+
+- **ERPNext URL** — e.g. `https://your-site.erpnext.com`
+- **ERPNext API key** and **API secret** — in ERPNext, go to **User → API Access → Generate Keys**. It is safest to create a dedicated user and give it only the roles it needs.
 
 Requires Node.js ≥ 20 (the MCP server runs via `npx`).
 
-### 2. Install the plugin
-
-**Option A — local testing (quick to try):**
+**Local development / testing** — run Claude Code with the plugin loaded from a folder instead:
 
 ```bash
 claude --plugin-dir /path/to/erpnext-toolkit
-```
-
-**Option B — via a marketplace (to share with a team):**
-
-1. Push this folder to a GitHub repo and add a `.claude-plugin/marketplace.json` at the repo root.
-2. In Claude Code:
-
-```
-/plugin marketplace add your-github-user/your-repo
-/plugin install erpnext-toolkit
 ```
 
 ### 3. Verify

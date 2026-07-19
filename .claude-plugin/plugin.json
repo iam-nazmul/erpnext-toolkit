@@ -9,6 +9,8 @@
     "email": "nazmul.cse48@gmail.com"
   },
   "license": "MIT",
+  "homepage": "https://github.com/iam-nazmul/erpnext-toolkit#readme",
+  "repository": "https://github.com/iam-nazmul/erpnext-toolkit",
   "keywords": ["erpnext", "frappe", "erp", "doctype", "bench", "mcp"],
   "userConfig": {
     "erpnext_url": {
