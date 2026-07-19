@@ -45,6 +45,10 @@ claude --plugin-dir /path/to/erpnext-toolkit
 - The `erpnext-analyst` agent is read-only by its rules, but the final control is the API user's roles.
 - `@casys/mcp-erpnext` is a community project — review it before installing: https://github.com/Casys-AI/mcp-erpnext
 
+## Privacy
+
+The plugin collects nothing and runs entirely on your machine — credentials are stored locally by Claude Code, and data flows only to your own ERPNext instance and to Anthropic (as with all Claude Code usage). Full details: [PRIVACY.md](PRIVACY.md)
+
 ## Docs
 
 - Claude Code plugins: https://code.claude.com/docs/en/plugins-reference
