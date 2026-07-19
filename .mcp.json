@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "erpnext": {
+      "command": "npx",
+      "args": ["-y", "@casys/mcp-erpnext"],
+      "env": {
+        "ERPNEXT_URL": "${user_config.erpnext_url}",
+        "ERPNEXT_API_KEY": "${user_config.erpnext_api_key}",
+        "ERPNEXT_API_SECRET": "${user_config.erpnext_api_secret}"
+      }
+    }
+  }
+}

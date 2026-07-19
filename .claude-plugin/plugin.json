@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "erpnext-toolkit",
+  "displayName": "ERPNext Toolkit",
+  "version": "1.0.0",
+  "description": "All-in-one ERPNext/Frappe toolkit: skills for API integration, custom app & DocType development, low-code customization, reports and business workflows; slash commands for common ERP tasks; specialized agents; and a live MCP connection to your ERPNext instance.",
+  "author": {
+    "name": "MD. NAZMUL HOSSAIN",
+    "email": "nazmul.cse48@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["erpnext", "frappe", "erp", "doctype", "bench", "mcp"],
+  "userConfig": {
+    "erpnext_url": {
+      "type": "string",
+      "title": "ERPNext URL",
+      "description": "Base URL of your ERPNext instance, e.g. https://erp.example.com",
+      "required": true
+    },
+    "erpnext_api_key": {
+      "type": "string",
+      "title": "ERPNext API key",
+      "description": "API key from your ERPNext user (Settings > My Settings > API Access)",
+      "sensitive": true,
+      "required": true
+    },
+    "erpnext_api_secret": {
+      "type": "string",
+      "title": "ERPNext API secret",
+      "description": "API secret generated alongside the API key",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "erpnext-marketplace",
+  "owner": {
+    "name": "MD. NAZMUL HOSSAIN",
+    "email": "nazmul.cse48@gmail.com"
+  },
+  "metadata": {
+    "description": "ERPNext/Frappe plugins for Claude Code — skills, commands, agents, and a live MCP connection to your ERPNext instance.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "erpnext-toolkit",
+      "source": "./",
+      "description": "All-in-one ERPNext/Frappe toolkit: skills for API integration, DocType development, low-code customization, reports and business workflows; /erp-query, /erp-doctype, /erp-report, /erp-fix commands; erpnext-developer and erpnext-analyst agents; and an MCP connection to your live ERPNext instance.",
+      "version": "1.0.0",
+      "category": "development",
+      "keywords": ["erpnext", "frappe", "erp", "doctype", "bench", "mcp"]
+    }
+  ]
+}
